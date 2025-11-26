@@ -126,7 +126,7 @@ fun LoginScreen(navController: NavController) {
 
                         result.onSuccess { user ->
                             Toast.makeText(context, "Chào mừng ${user.fullName}", Toast.LENGTH_SHORT).show()
-                            navController.navigate(Screen.Home.route) {
+                            navController.navigate(Screen.Home.createRoute(user.fullName)) {
                                 popUpTo(Screen.Login.route) { inclusive = true }
                             }
                         }.onFailure {

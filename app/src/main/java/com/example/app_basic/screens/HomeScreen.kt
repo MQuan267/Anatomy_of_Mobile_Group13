@@ -25,7 +25,7 @@ import com.example.app_basic.navigation.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(navController: NavController, fullName: String) {
     val context = LocalContext.current
 
     Scaffold(
@@ -113,7 +113,7 @@ fun HomeScreen(navController: NavController) {
                                 color = Color.White.copy(alpha = 0.9f)
                             )
                             Text(
-                                "Người dùng",
+                                fullName,
                                 fontSize = 22.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White

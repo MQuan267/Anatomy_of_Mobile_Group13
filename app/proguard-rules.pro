@@ -1,4 +1,4 @@
-# 1. ROOM & SQLITE (bắt buộc để tránh crash)
+# 1. ROOM AND SQLITE (bắt buộc để tránh crash)
 -keep class * extends androidx.room.RoomDatabase
 -keep @androidx.room.Entity class *
 -keep class com.example.app_basic.data.** { *; }
@@ -23,7 +23,7 @@
 -keep public class * extends android.app.Service
 -keep public class * extends android.content.BroadcastReceiver
 -keep public class * extends android.content.ContentProvider
-# Giữ các View (Compose không cần nhiều, nhưng an toàn)
+# Giữ các View
 -keepclassmembers class * {
     public <init>(android.content.Context, android.util.AttributeSet);
 }

@@ -8,9 +8,7 @@ import javax.crypto.spec.PBEKeySpec
 object PasswordHasher {
 
     /**
-     * Mã hóa mật khẩu bằng PBKDF2 (chuẩn công nghiệp)
-     * @param password Mật khẩu gốc
-     * @return Mật khẩu đã mã hóa kèm salt (format: "salt:hash")
+     * Mã hóa mật khẩu bằng PBKDF2
      */
     fun hashPassword(password: String): String {
         // Tạo salt ngẫu nhiên (64 bytes)
@@ -81,8 +79,7 @@ object PasswordHasher {
     }
 
     /**
-     * Hash đơn giản bằng SHA-256 (cho mục đích demo/testing)
-     * ⚠️ Không nên dùng trong production vì không có salt
+     * Hash đơn giản bằng SHA-256
      */
     @Deprecated("Dùng hashPassword() thay vì SHA-256 đơn giản")
     fun sha256(input: String): String {

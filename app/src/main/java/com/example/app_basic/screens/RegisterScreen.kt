@@ -47,7 +47,7 @@ fun RegisterScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(40.dp))
 
         Text(
-            text = "Tạo Tài Khoản",
+            text = "ĐĂNG KÝ",
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             color = Color(0xFF1976D2)
